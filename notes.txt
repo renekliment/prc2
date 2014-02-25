@@ -1,2 +1,8 @@
 zabkavit@fjfi.cvut.cz
 kmlinux.fjfi.cvut.cz/~zabkavit
+
+m_ pro atributy třídy - od "member"
+
+Pevne pole x, y(x); // y bude kopie x
+
+void vypis() const; // metoda nesmí měnit atributy třídy
