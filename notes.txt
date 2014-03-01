@@ -6,3 +6,15 @@ m_ pro atributy třídy - od "member"
 Pevne pole x, y(x); // y bude kopie x
 
 void vypis() const; // metoda nesmí měnit atributy třídy
+
+int *p = new int;
+delete p;
+
+int *pp = new int[10];
+delete[] pp;
+
+private / public funguje na úrovni třídy, ne na úrovni instance třídy
+
+// ekvivalentní
+x = y;
+x.operator=(y);
