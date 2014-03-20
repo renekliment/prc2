@@ -18,3 +18,8 @@ private / public funguje na úrovni třídy, ne na úrovni instance třídy
 // ekvivalentní
 x = y;
 x.operator=(y);
+
+(*this)[i] // this je ukazatel - tedy dereferencovat hvězdičkou
+
+#include <cassert>
+assert(podmínka); // když není splněna, tak to sletí se zprávou
