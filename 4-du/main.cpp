@@ -20,7 +20,7 @@ int main(void)
         cin >> a;
         if (a == 0) break;
          
-       cout << a << (p.isPrime(a) ? " is" : " is NOT") << " a prime number." << endl;
+        cout << a << (p.isPrime(a) ? " is" : " is NOT") << " a prime number." << endl;
     }
     
     return 0;
