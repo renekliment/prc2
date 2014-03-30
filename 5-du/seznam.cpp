@@ -98,19 +98,15 @@ void Seznam::vlozZa(Seznam::Iterator iter, T data)
 }
 
 void Seznam::odstran(Seznam::Iterator iter)
-{
-    Prvek *toDelete;
-    Prvek *current = m_hlava;
-    while (current->dalsi != iter.m_prvek) {
-        current = current->dalsi;
-    }
-    toDelete = current->dalsi;
-  
-    current->dalsi = current->dalsi->dalsi;
-    
-    iter.m_prvek = current;
-    
-    delete toDelete;
+{	
+	Prvek *next = iter.m_prvek->dalsi;
+	*(iter.m_prvek) = *(iter.m_prvek->dalsi);
+	
+	if (next == m_zarazka) {
+		m_zarazka = iter.m_prvek;
+	}
+		
+	delete next;
 }
 
 // Trida Iterator
